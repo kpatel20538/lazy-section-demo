@@ -1,8 +1,12 @@
 import React from "react";
-import {Button} from "rbx";
+import { Button, Section } from "rbx";
 
 const Loader = () => {
-  return <Button state="loading" size="large" /> 
+  return (
+    <Section>
+      <Button state="loading" size="large" />
+    </Section>
+  );
 };
 
 export default Loader;
