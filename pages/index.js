@@ -1,4 +1,5 @@
 import HeroSection from "../components/HeroSection";
+import CarouselSection from "../components/CarouselSection";
 import BasicSection1 from "../components/BasicSection1";
 import BasicSection2 from "../components/BasicSection2";
 import BasicSection3 from "../components/BasicSection3";
@@ -11,6 +12,7 @@ const Baseline = () => (
       title="Baseline Test"
       subtitle="No Lazy Loading"
     />
+    <CarouselSection />
     <BasicSection1 />
     <BasicSection2 />
     <BasicSection3 />
