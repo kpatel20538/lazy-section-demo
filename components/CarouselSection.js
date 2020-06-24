@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Section,
-  Container,
-  Card,
-  Image,
-  Media,
-  Title,
-  Content,
-} from "rbx";
+import { Section, Container, Card, Image, Media, Title, Content } from "rbx";
 import SlickSlider from "./SlickSlider";
 
 const SlideCard = ({ id }) => (
@@ -22,6 +14,7 @@ const SlideCard = ({ id }) => (
         <Media.Item as="figure" align="left">
           <Image.Container size={64}>
             <Image
+              rounded
               alt="64x64"
               src="https://bulma.io/images/placeholders/128x128.png"
             />
@@ -50,15 +43,32 @@ const CarouselSection = () => {
     <Section>
       <Container textAlign="centered">
         <Title size={2}>Lorem Ipsum</Title>
+        <Title size={4} subtitle>
+          Consectetur adipiscing elit.
+        </Title>
         <SlickSlider
           autoplay
           autoplaySpeed={5000}
           arrows={false}
           infinite
           pauseOnHover
-          slidesToScroll={1}
-          slidesToShow={3}
           speed={500}
+          slidesToShow={3}
+          slidesToScroll={1}
+          responsive={[
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ]}
         >
           {Array.from({ length: 8 })
             .map((_, i) => i + 500)
