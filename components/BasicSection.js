@@ -1,50 +1,49 @@
-import React from "react";
-import { Section, Column, Card, Image, Media, Title, Content } from "rbx";
+import { Section, Column, Container, Image, Title, Content } from "rbx";
 
-const BasicSection = ({ offset = 500 }) => {
+const TextColumn = () => (
+  <Column textAlign="centered" size="three-fifths">
+    <Title>Lorem ipsum dolor</Title>
+    <Content>
+      Etiam aliquet risus ultricies, viverra mi et, molestie dui. Donec sit amet
+      arcu ut neque ultrices euismod. Etiam vitae vulputate sem. Mauris
+      venenatis mauris in ex aliquet, vel malesuada ipsum sollicitudin. Donec eu
+      aliquam ligula, vel vulputate enim. Donec eleifend tellus eu neque
+      pulvinar, sit amet auctor sem consequat.
+    </Content>
+  </Column>
+);
+
+const ImageColumn = ({ src }) => (
+  <Column size="two-fifths">
+    <Image.Container size="4by3">
+      <Image src={src} />
+    </Image.Container>
+  </Column>
+);
+
+
+const BasicSection = ({ alternate, src }) => {
   return (
     <Section>
-      <Column.Group>
-        {[1, 2, 3, 4].map((i) => (
-          <Column key={i}>
-            <Card>
-              <Card.Image>
-                <Image.Container size="4by3">
-                  <Image
-                    src={`https://picsum.photos/id/${offset + i}/1280/960`}
-                  />
-                </Image.Container>
-              </Card.Image>
-              <Card.Content>
-                <Media>
-                  <Media.Item as="figure" align="left">
-                    <Image.Container size={64}>
-                      <Image
-                        alt="64x64"
-                        src="https://bulma.io/images/placeholders/128x128.png"
-                      />
-                    </Image.Container>
-                  </Media.Item>
-                  <Media.Item>
-                    <Title size={4}>John Smith</Title>
-                    <Title subtitle size={6}>
-                      @johnsmith
-                    </Title>
-                  </Media.Item>
-                </Media>
-                <Content>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris. <a href="#@bulmaio">@bulmaio</a>
-                  . <a href="#css">#css</a>{" "}
-                  <a href="#responsive">#responsive</a>
-                  <br />
-                  <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                </Content>
-              </Card.Content>
-            </Card>
+      <Container>
+        <Column.Group centered>
+          <Column size="three-quarters">
+            <Column.Group>
+              {alternate ? (
+                <>
+                  <ImageColumn src={src} />
+                  <TextColumn />
+                </>
+              ) : (
+                <>
+                  <TextColumn />
+                  <ImageColumn src={src} />
+                </>
+              )}
+            </Column.Group>
           </Column>
-        ))}
-      </Column.Group>
+        </Column.Group>
+      </Container>
     </Section>
   );
 };

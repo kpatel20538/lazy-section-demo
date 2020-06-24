@@ -4,7 +4,7 @@ import { reactPlayer} from './video.module.css';
 
 const VideoSection = () => {
   return (
-    <Section>
+    <Section backgroundColor="light">
       <Container>
         <Column.Group vcentered>
           <Column>

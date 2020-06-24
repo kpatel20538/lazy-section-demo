@@ -3,7 +3,6 @@ import HeroSection from "../components/HeroSection";
 import BasicSection1 from "../components/BasicSection1";
 import BasicSection2 from "../components/BasicSection2";
 import BasicSection3 from "../components/BasicSection3";
-import BasicSection4 from "../components/BasicSection4";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 const lazy = (Component) => {
@@ -21,7 +20,6 @@ const lazy = (Component) => {
 const LazyBasicSection1 = lazy(BasicSection1);
 const LazyBasicSection2 = lazy(BasicSection2);
 const LazyBasicSection3 = lazy(BasicSection3);
-const LazyBasicSection4 = lazy(BasicSection4);
 
 const ObserveTest = () => (
   <main>
@@ -33,7 +31,6 @@ const ObserveTest = () => (
     <LazyBasicSection1 />
     <LazyBasicSection2 />
     <LazyBasicSection3 />
-    <LazyBasicSection4 />
   </main>
 );
 
