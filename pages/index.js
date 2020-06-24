@@ -5,6 +5,7 @@ import CardSection from "../components/CardSection";
 import BasicSection1 from "../components/BasicSection1";
 import BasicSection2 from "../components/BasicSection2";
 import BasicSection3 from "../components/BasicSection3";
+import FooterSection from "../components/FooterSection";
 
 const Baseline = () => (
   <main>
@@ -19,6 +20,7 @@ const Baseline = () => (
     <BasicSection1 />
     <BasicSection2 />
     <BasicSection3 />
+    <FooterSection />
   </main>
 );
 
