@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+.slickContainer {
+  position: relative;
+}
+.nextArrow,
+.prevArrow,
+.pagingDots {
+  position: absolute;
+}
+.nextArrow,
+.prevArrow {
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+.prevArrow {
+  left: 0;
+}
+.nextArrow {
+  right: 0;
+}
+.slickSlide {
+  padding: 1em;
+}
+.pagingDots {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
