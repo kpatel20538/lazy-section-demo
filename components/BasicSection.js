@@ -18,7 +18,7 @@ const BasicSection = ({ offset = 500 }) => {
             <Card.Content>
               <Media>
                 <Media.Item as="figure" align="left">
-                  <Image.Container as="p" size={64}>
+                  <Image.Container size={64}>
                     <Image
                       alt="64x64"
                       src="https://bulma.io/images/placeholders/128x128.png"
@@ -26,10 +26,10 @@ const BasicSection = ({ offset = 500 }) => {
                   </Image.Container>
                 </Media.Item>
                 <Media.Item>
-                  <Title as="p" size={4}>
+                  <Title size={4}>
                     John Smith
                   </Title>
-                  <Title as="p" subtitle size={6}>
+                  <Title subtitle size={6}>
                     @johnsmith
                   </Title>
                 </Media.Item>
