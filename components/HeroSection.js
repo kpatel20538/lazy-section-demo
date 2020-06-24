@@ -8,13 +8,7 @@ const NavbarMenu = () => {
       <Navbar.Brand>
         <Link href="/">
           <Navbar.Item as="a">
-            <img
-              src="/logo-11.svg"
-              alt=""
-              role="presentation"
-              width="96"
-              height="64"
-            />
+            <img src="/vercel.svg" alt="Logo" />
           </Navbar.Item>
         </Link>
         <Navbar.Burger />
@@ -39,20 +33,20 @@ const NavbarMenu = () => {
   );
 };
 
-const HeroSection = ({ color = "primary", title, subtitle }) => {
+const HeroSection = ({ color, title, subtitle }) => {
   return (
     <>
       <NavbarMenu />
-      <Hero color={color} size="fullheight-with-navbar">
+      <Hero color={color} gradient size="fullheight-with-navbar">
         <Hero.Body>
           <Container textAlign="centered">
             <Title size={1}>{title}</Title>
-            <Title subtitle size={3}>
+            <Title size={3} subtitle>
               {subtitle}
             </Title>
-            <Button inverted color={color} size="large">
+            <Button color={color} inverted size="large">
               Call to Action
-          </Button>
+            </Button>
           </Container>
         </Hero.Body>
       </Hero>
